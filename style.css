@@ -32,17 +32,18 @@ body {
 #sec1{
     height: auto;
     width:100%;
-    background-image: linear-gradient(to right, #8860d0, #5ab9ea);
+    /* background-image: linear-gradient(to right, #8860d0, #5ab9ea); */
+    background-color: #374f9f;
     text-align: center;
     display: block;
     text-align: center;
-    padding:45px;
+    padding:0px 45px 45px 45px;
     box-sizing: border-box;
     
 }
 
 #eplanista{
-    margin: 30 0 10 0;
+    margin: 0 0 0 0;
     font-size: 62px;
     color:#f3f3f3;
     float:left;
@@ -65,7 +66,8 @@ body {
 #opis-container{
     width:100%;
     float:left;
-    margin-bottom:240px;
+    padding-top:40px;
+    margin-bottom:159px;
 }
 
 #projekt{
@@ -85,10 +87,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     flex-wrap: wrap;
     background-color: #c1c8e4;
     padding-top:15px;
+    padding-bottom:160px;
 }
 
 #members-header{
@@ -102,7 +105,8 @@ body {
 
 .members-header-title{
     margin:0px;
-    padding-top:40px;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 .member{
@@ -113,6 +117,25 @@ body {
     float:left;
     border-radius: 120px; 
     
+}
+
+#kamil-container{
+    float:left;
+    background-color: #c1c8e4;
+   padding-top:15px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+#kamil-member{
+
+    margin: 0 auto;
+    position: relative;
+    width: 600px;
 }
 
 
@@ -132,7 +155,7 @@ body {
   }
 
 #totop{
-    background-image:linear-gradient(to right, #8860d0, #5ab9ea);
+    background-image:linear-gradient(to bottom, #8860d0, #5ab9ea);
     margin:0px;
     width:100%;
     height:auto;
@@ -156,10 +179,16 @@ body {
 }
 
 #timeline-header{
-    background-image:linear-gradient(to right, #8860d0, #5ab9ea);
+    /* background-image:linear-gradient(to right, #8860d0, #5ab9ea); */
+    background-color:#374f9f;
     padding:0px;
     text-align: center;
     color:#f3f3f3;
+}
+
+.timeline-header-title{
+    padding-top:20px;
+    margin-bottom:0px;
 }
 
 
@@ -181,7 +210,7 @@ ul, li {
     justify-content: center;
     /*align-items: center;*/
     padding: 0 1rem;
-    background: linear-gradient(to right, #8860d0, #5ab9ea);
+    background: linear-gradient(to bottom, #374f9f, #5ab9ea);
     padding: 3rem 0;
     
 }
@@ -226,6 +255,11 @@ li:before {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+
+#logo-main {
+    width:45%;
+
+}
 @media screen and (min-width: 601px) {
     .time {
         font-size: 0.9rem;
@@ -250,4 +284,112 @@ p {
 }
 
 
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #4e5ed3;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
+  #menu-button
+  {
+      position:fixed;
+      top:5;
+      right:10;
+      font-size:30px;
+      cursor:pointer
+  }
+
+
+  .member-container{
+    position: relative;
+    height: 500px;
+    width: 500px;
+  }
+  .scale{
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    position: absolute;
+    transition: 0.3s all;
+  }
+  div#one {
+    background-image: url(michal-twarz.png);
+    -moz-border-radius: 240px 0 0 0;
+    border-radius: 240px 0 0 0;
+    left: 0;
+    top: 0;
+  }
+  div#two{
+     background-image: url(krystian-twarz.png);
+    -moz-border-radius: 0 240px 0 0;
+    border-radius: 0 240px 0 0;
+    right: 0;
+  }
+  div#three{
+    background-image: url(adam-twarz.png);
+    -moz-border-radius: 0 0 240px 0;
+    border-radius: 0 0 240px 0;
+    bottom: 0;
+    right: 0;
+  }
+  div#four{
+    background-image: url(tomek-twarz.png);
+    -moz-border-radius: 0 0 0 240px;
+    border-radius: 0 0 0 240px;
+    bottom: 0;
+  }
+  .scale:hover{
+    transform: scale(1.1);
+    z-index: 100;
+      filter: blur(0) !important;
+    -webkit-filter: blur(0) !important;
+  }
+  .member-container:hover .scale{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+  }
+
+  #kamil-profilowe
+  {
+      background-image: url("kamil_profilowe.png");
+      background-position: center;
+      background-size:350px;
+      height:350;
+      width:350;
+      -moz-border-radius: 240px;
+      border-radius: 240px;
+      float:left;
+  }

@@ -8,44 +8,90 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-
+<!--
     <div id="navbar">
-        <!--<div class="element">O projekcie</div>TESTTEST--> 
+        <div class="element">O projekcie</div>TESTTEST
         <a href="#members-header"><div class="element">Członkowie zespołu</div></a>
         <a href="#osczasu"><div class="element">Oś czasu</div></a>
     </div>
+--> 
 
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Home</a>
+      <a href="#members-header">Zespół</a>
+      <a href="#osczasu">Oś czasu</a>
+    </div>
     <div id="sec1">
+      
         <div id="eplanista">
-            <h1>PLAN.IT</h1>
+          <span onclick="openNav()" id="menu-button" > Menu &#9776;</span>
+            <h1 id="typewriter"></h1>
+            <img src="logo.png" id="logo-main" />
+            
+
+            <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+              }
+              </script>
         </div>
+        <!--
+        <script>
+
+          window.onload = function() {
+            typeWriter();
+          };
+          var i = 0;
+          var txt = 'Plan.it( )';
+          var speed = 80;
+          
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("typewriter").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+          </script>-->
         <div id="opis-container">
         <div class="opis">
-          Ułożenie rozkładu lekcji w większych szkołach czy uczelniach może sprawiać nie lada problem. Nakładające się lekcje, niepasujące godziny, duże przerwy pomiędzy zajęciami, to główne problemy z którymi trzeba się często uporać. To właśnie dlatego nasz zespół zdecydował się stworzyć program rozwiązujący owe trudności.
+          Ułożenie planu zajęć w większych szkołach czy uczelniach może sprawiać nie lada problem. Nakładające się lekcje, niepasujące godziny, duże przerwy pomiędzy zajęciami, to główne problemy z którymi trzeba się często uporać. To właśnie dlatego nasz zespół zdecydował się stworzyć program rozwiązujący owe trudności.
         </div>
         </div>
         
-        <a href="#members-header" style="width:100%;"><image src="down_arrow.png" class="arrow"/></a>  
+        <a href="#members-header" style="width:100%;"><image class="arrow"/></a>  
     </div>
-    <div id="members-header"><h1 class="members-header-title">Członkowie zespołu</h1></div>
-    <div id="czlonkowie">
-        
+    <div id="members-header"><h1 class="members-header-title">Zespół</h1></div>
+    <div id="kamil-container">
+      <div class="member" id="kamil-member">
+        <image src="kamil_profilowe.png" class="memberimg"/><h2>Kamil Jarzembski</h2> <h3><span class="opis-osoby">Opiekun zespołu</span></h3> <span class="opis-osoby">Service Operation Manager - Atos </span></div></div>
+    <div id="czlonkowie">        
         <div class="member">
-            <image src="kamil_profilowe.png" class="memberimg"/><h2>Kamil Jarzembski</h2> <h3><span class="opis-osoby">Opiekun zespołu</span></h3> <span class="opis-osoby">Service Operation Manager - Atos </span></div>
+            <image src="michal-twarz.png" class="memberimg"/><h2>Michał Chudy</h2><h3><span class="opis-osoby">Lider zespołu</span></h3><span class="opis-osoby"></span>Python, Java, C# </div>
         <div class="member">
-            <image src="michal_profilowe.png" class="memberimg"/><h2>Michał Chudy</h2><h3><span class="opis-osoby">Lider zespołu</span></h3><span class="opis-osoby"></span>Python, Java, C# </div>
+            <image src="krystian-twarz.png" class="memberimg"/><h2>Krystian Pawełczak</h2><span class="opis-osoby">C#, Python, Java, .NET, SQL</span></div>
         <div class="member">
-            <image src="krystian_profilowe.png" class="memberimg"/><h2>Krystian Pawełczak</h2><span class="opis-osoby">C#, Python, Java, .NET, SQL</span></div>
+            <image src="tomek-twarz.png" class="memberimg"/><h2>Tomasz Narloch</h2><span class="opis-osoby"></span>C#, Java, SQL, Android SDK</span></div>
         <div class="member">
-            <image src="tomek_profilowe.png" class="memberimg"/><h2>Tomasz Narloch</h2><span class="opis-osoby"></span>C#, Java, SQL, Android SDK</span></div>
-        <div class="member">
-            <image src="adam_profilowe.png" class="memberimg"/><h2>Adam Gańczewski</h2><span class="opis-osoby"></span>Python, C#, SQL</span></div>
+            <image src="adam-twarz.png" class="memberimg"/><h2>Adam Gańczewski</h2><span class="opis-osoby"></span>Python, C#, SQL</span></div>
       
-            
+<!--<div id="kamil-profilowe"></div>
+      <div class="member-container">
+        <div class="scale" id="one"></div>
+        <div class="scale" id="two"></div>
+        <div class="scale" id="three"></div>
+        <div class="scale" id="four"></div>
+      </div>
+        -->    
     </div>
-    <div class="arrow-container"><a href="#osczasu"><image src="down_arrow.png" class="arrow"/></a></div>
+    <!--<div class="arrow-container"><a href="#osczasu"><image src="down_arrow.png" class="arrow"/></a></div>-->
     <div id="osczasu">
-        <div id="timeline-header"><h1 class="members-header-title">Oś czasu</h1></div>
+        <div id="timeline-header"><h1 class="timeline-header-title">Oś czasu</h1></div>
         <div class="container">
             <div class="wrapper">
               <ul class="sessions">
